@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  color: white;
+  white-space: no-wrap;
+  padding-right: 20px;
+}
+
+.logo {
+  margin: auto 200px auto 20px;
+}
+
+@media screen and (max-width: 550px) {
+  .logo {
+    margin: auto 30px auto 20px;
+  }
+}
