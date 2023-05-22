@@ -9,7 +9,10 @@ export function Content() {
           <p>Here i am training with some things about React</p>
         </div>
       </div>
-      <input type="text" />
+      <label className={styles.firstInputLabel} htmlFor="firstInput">
+        Инпут, который сохраняет данные
+      </label>
+      <input className={styles.firstInput} type="text" id="firstInput" />
     </div>
   );
 }
