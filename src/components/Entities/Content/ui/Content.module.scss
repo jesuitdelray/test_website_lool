@@ -4,14 +4,66 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .firstInput {
   display: block;
-  margin: 0 auto;
+  margin: 100px auto 5px auto;
+  width: 200px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.firstInput:focus {
+  outline: none;
 }
 
 .firstInputLabel {
-  align-self: center;
-  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.firstSaveButton {
+  width: 220px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: 1px solid rgb(84, 135, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 5px blue;
+  margin-bottom: 20px;
+}
+
+.firstSaveButton:hover {
+  width: 240px;
+  height: 31px;
+}
+
+.firstShowButton {
+  width: 240px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: 1px solid rgb(84, 135, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 5px blue;
+  margin-bottom: 20px;
+}
+
+.firstShowButton:hover {
+  width: 250px;
+  height: 32px;
+}
+
+.dataBlock {
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  color: rgb(84, 135, 255);
+  opacity: 80%;
+  border-radius: 10px;
 }

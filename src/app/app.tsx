@@ -3,7 +3,7 @@ import { Main } from '../components/Pages/Main/ui/Main';
 
 export function App() {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Main />
     </div>
   );
