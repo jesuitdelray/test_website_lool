@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import styles from './Content.module.scss';
+import styles from './Input.module.scss';
 
-export function Content() {
+export function Input() {
   const [inputValue, setInputValue] = useState('');
   const [name, setName] = useState<string>([]);
   const [storedName, setStoredName] = useState(localStorage.getItem('name'));
@@ -16,6 +16,9 @@ export function Content() {
   }
 
   function showInputButton() {
+    if (inputValue === 'admin') {
+      setIsToggle(true);
+    }
     if (isToggle) {
       setStoredName((prev) => (prev ? `${prev} | ${inputValue}` : inputValue));
       setIsToggle(false);
@@ -26,8 +29,7 @@ export function Content() {
     <div>
       <div className={styles.wrapper}>
         <div className={styles.textBlock}>
-          <p>Welcome to my test page</p>
-          <p>Here i am training with some things about React</p>
+          <p>Welcome to my training page</p>
         </div>
         <input
           className={styles.firstInput}
