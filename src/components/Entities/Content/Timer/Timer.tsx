@@ -3,22 +3,20 @@ import styles from './Timer.module.scss';
 
 export function Timer() {
   const [time, setTime] = useState(0);
-
-  const timeInstructions = time % 9 === 0 ? time / 9 : 0;
-
+  // const {min, sec} = time
+  const sec = time % 60;
+  const min = Math.floor(time / 60);
   useEffect(() => {
-    const interval = setInterval(
-      () => setTime((prev) => (prev < 9 ? prev + 1 : 0)),
-      1000
-    );
+    const interval = setInterval(() => setTime((prev) => prev + 1), 1000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className={styles.wrapper}>
       <p className={styles.timer}>
-        {timeInstructions}:{timeInstructions > 0 ? 0 : time}
+        {min} min {sec} sec
       </p>
     </div>
   );
 }
+// 256 sec 256 % 60 = sec
