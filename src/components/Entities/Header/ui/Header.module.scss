@@ -11,6 +11,19 @@
   margin: auto 200px auto 20px;
 }
 
+.burgerSVG {
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+.burgerSVG:active {
+  transform: rotate(90deg);
+}
+
+.burgerSVG:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 550px) {
   .logo {
     margin: auto 30px auto 20px;
