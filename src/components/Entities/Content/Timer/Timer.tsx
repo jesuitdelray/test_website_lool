@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import styles from './Timer.module.scss';
-import { timerFunc } from 'src/components/Shared/timerFn/timerFunc';
+import { convertTime } from 'src/components/Shared/timerFn/convertTime';
 
 export function Timer() {
   const [time, setTime] = useState(0);
-  const { min, sec } = timerFunc(time);
+  const { min, sec } = convertTime(time);
   useEffect(() => {
     const interval = setInterval(() => setTime((prev) => prev + 1), 1000);
     return () => clearInterval(interval);
